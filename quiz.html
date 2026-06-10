@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width">
+
+<title>
+
+SafeRoad Quiz
+
+</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+}
+
+body{
+
+background:
+
+linear-gradient(
+135deg,
+#edf4ff,
+#d8e5ff
+);
+
+}
+
+nav{
+
+background:#0d47a1;
+
+padding:20px;
+
+text-align:center;
+
+}
+
+nav a{
+
+color:white;
+
+text-decoration:none;
+
+font-size:22px;
+
+}
+
+.container{
+
+max-width:900px;
+
+margin:50px auto;
+
+background:white;
+
+padding:40px;
+
+border-radius:25px;
+
+box-shadow:
+0 0 20px gray;
+
+}
+
+h1{
+
+text-align:center;
+
+color:#0d47a1;
+
+margin-bottom:40px;
+
+}
+
+.question{
+
+margin-bottom:35px;
+
+}
+
+.question h3{
+
+margin-bottom:15px;
+
+}
+
+label{
+
+display:block;
+
+padding:10px;
+
+}
+
+button{
+
+display:block;
+
+margin:auto;
+
+padding:15px 40px;
+
+background:#0d47a1;
+
+color:white;
+
+border:none;
+
+font-size:20px;
+
+cursor:pointer;
+
+border-radius:10px;
+
+}
+
+#result{
+
+text-align:center;
+
+font-size:35px;
+
+margin-top:30px;
+
+color:red;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+<a href="index.html">
+
+← Back Home
+
+</a>
+
+</nav>
+
+<div class="container">
+
+<h1>
+
+🚦 Road Safety MCQ Quiz
+
+</h1>
+
+<form id="quiz"></form>
+
+<button onclick="check()">
+
+Submit Quiz
+
+</button>
+
+<div id="result"></div>
+
+</div>
+
+
+
+<script>
+
+const quiz=[
+
+{
+q:"1. Red signal means?",
+o:["Turn","Speed Up","Stop","Go"],
+a:"Stop"
+},
+
+{
+q:"2. Green signal means?",
+o:["Wait","Horn","Go","Stop"],
+a:"Go"
+},
+
+{
+q:"3. Helmet should be worn?",
+o:["Night Only","Always","Optional","Never"],
+a:"Always"
+},
+
+{
+q:"4. Seat belt is for?",
+o:["Decoration","Music","Safety","Speed"],
+a:"Safety"
+},
+
+{
+q:"5. Mobile while driving?",
+o:["Game","Avoid","Chat","Use"],
+a:"Avoid"
+},
+
+{
+q:"6. Yellow signal means?",
+o:["Race","Turn","Wait","Stop"],
+a:"Wait"
+},
+
+{
+q:"7. Wrong side driving?",
+o:["Fast","Dangerous","Safe","Good"],
+a:"Dangerous"
+},
+
+{
+q:"8. Speed limit should?",
+o:["Double","Ignore","Follow","Break"],
+a:"Follow"
+},
+
+{
+q:"9. Drink and drive?",
+o:["Fast","Allowed","Never","Good"],
+a:"Never"
+},
+
+{
+q:"10. Zebra crossing is for?",
+o:["Bike","Pedestrians","Parking","Cars"],
+a:"Pedestrians"
+},
+
+{
+q:"11. Indicators are used for?",
+o:["Lights","Turning","Speed","Music"],
+a:"Turning"
+},
+
+{
+q:"12. Helmet protects?",
+o:["Back","Head","Feet","Hands"],
+a:"Head"
+},
+
+{
+q:"13. Road signs help?",
+o:["Fuel","Navigation","Game","Speed"],
+a:"Navigation"
+},
+
+{
+q:"14. Driving requires?",
+o:["Phone","Attention","Music","Sleep"],
+a:"Attention"
+},
+
+{
+q:"15. Safe distance should?",
+o:["Reduce","Maintain","Break","Ignore"],
+a:"Maintain"
+}
+
+];
+
+
+
+const form=
+document
+.getElementById(
+"quiz"
+);
+
+
+
+quiz.forEach((x,i)=>{
+
+form.innerHTML+=
+
+`
+
+<div class="question">
+
+<h3>
+
+${x.q}
+
+</h3>
+
+${x.o.map(y=>
+
+`
+
+<label>
+
+<input
+type="radio"
+
+name="q${i}"
+
+value="${y}">
+
+${y}
+
+</label>
+
+`
+
+).join("")}
+
+</div>
+
+`;
+
+});
+
+
+
+function check(){
+
+let score=0;
+
+quiz.forEach((x,i)=>{
+
+let a=
+
+document
+.querySelector(
+
+'input[name=q'+i+']:checked'
+
+);
+
+if(
+a&&
+a.value===x.a
+
+)
+
+score++;
+
+});
+
+document
+.getElementById(
+"result"
+)
+
+.innerHTML=
+
+"🏆 Score: "
+
++
+
+score
+
++
+
+"/15";
+
+}
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1">
+
+<title>
+
+Statistics | SafeRoad
+
+</title>
+
+<style>
+
+*{
+
+margin:0;
+
+padding:0;
+
+box-sizing:border-box;
+
+font-family:Arial;
+
+}
+
+body{
+
+background:
+
+linear-gradient(
+135deg,
+#eef4ff,
+#dce8ff
+);
+
+}
+
+
+
+/* NAV */
+
+nav{
+
+background:#0d47a1;
+
+padding:20px;
+
+text-align:center;
+
+}
+
+nav a{
+
+color:white;
+
+text-decoration:none;
+
+font-size:22px;
+
+}
+
+
+
+/* HEADER */
+
+header{
+
+padding:80px;
+
+text-align:center;
+
+}
+
+header h1{
+
+font-size:60px;
+
+color:#0d47a1;
+
+}
+
+header p{
+
+font-size:22px;
+
+margin-top:20px;
+
+}
+
+
+
+/* CARDS */
+
+.stats{
+
+display:grid;
+
+grid-template-columns:
+
+repeat(
+auto-fit,
+minmax(250px,1fr)
+);
+
+gap:30px;
+
+padding:60px;
+
+}
+
+.card{
+
+background:white;
+
+padding:40px;
+
+text-align:center;
+
+border-radius:25px;
+
+box-shadow:
+
+0 0 15px
+
+rgba(0,0,0,.15);
+
+transition:.3s;
+
+}
+
+.card:hover{
+
+transform:
+
+translateY(-10px);
+
+}
+
+.number{
+
+font-size:60px;
+
+font-weight:bold;
+
+color:#0d47a1;
+
+}
+
+.text{
+
+font-size:22px;
+
+margin-top:20px;
+
+}
+
+
+
+/* PROGRESS */
+
+.progress{
+
+padding:60px;
+
+}
+
+.progress h1{
+
+text-align:center;
+
+margin-bottom:40px;
+
+color:#0d47a1;
+
+}
+
+.item{
+
+margin-bottom:40px;
+
+}
+
+.bar{
+
+height:30px;
+
+background:#ddd;
+
+border-radius:20px;
+
+overflow:hidden;
+
+}
+
+.fill{
+
+height:100%;
+
+background:#0d47a1;
+
+}
+
+
+
+/* FOOTER */
+
+footer{
+
+background:#0d47a1;
+
+color:white;
+
+text-align:center;
+
+padding:20px;
+
+margin-top:50px;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+<a href="index.html">
+
+← Back Home
+
+</a>
+
+</nav>
+
+
+
+<header>
+
+<h1>
+
+📊 Road Statistics
+
+</h1>
+
+<p>
+
+Road awareness saves lives.
+
+</p>
+
+</header>
+
+
+
+<section class="stats">
+
+<div class="card">
+
+<div class="number">
+
+90%
+
+</div>
+
+<div class="text">
+
+Helmet Protection
+
+</div>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="number">
+
+75%
+
+</div>
+
+<div class="text">
+
+Seat Belt Safety
+
+</div>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="number">
+
+40%
+
+</div>
+
+<div class="text">
+
+Mobile Related Risk
+
+</div>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="number">
+
+24/7
+
+</div>
+
+<div class="text">
+
+Road Awareness
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<section class="progress">
+
+<h1>
+
+Accident Causes
+
+</h1>
+
+
+
+<div class="item">
+
+Over Speed
+
+<div class="bar">
+
+<div
+class="fill"
+
+style="width:40%">
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="item">
+
+Mobile Use
+
+<div class="bar">
+
+<div
+class="fill"
+
+style="width:20%">
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="item">
+
+Signal Break
+
+<div class="bar">
+
+<div
+class="fill"
+
+style="width:15%">
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="item">
+
+Drunk Driving
+
+<div class="bar">
+
+<div
+class="fill"
+
+style="width:25%">
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<footer>
+
+© 2026 SafeRoad
+
+</footer>
+
+</body>
+
+</html>
